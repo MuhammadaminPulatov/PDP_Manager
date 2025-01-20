@@ -23,8 +23,8 @@ class Student:
 
 class PDPManager:
     def __init__(self):
-        self.students = []  # Talabalar ro'yxati
-        self.pupils = []    # O'quvchilar ro'yxati
+        self.students = []
+        self.pupils = []
 
     def add_student(self, student):
         if isinstance(student, Student):
@@ -55,3 +55,4 @@ class PDPManager:
 
     def get_all_pupils(self):
         return [pupil.info() for pupil in self.pupils]
+
