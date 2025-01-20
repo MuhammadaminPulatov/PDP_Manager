@@ -59,3 +59,26 @@ class PDPManager:
 
     def get_all_pupils(self):
         return [pupil.info() for pupil in self.pupils.values()]
+
+    manager = PDPManager()
+
+    pupil1 = Pupil("Ali", "Saidov", 2005, "123")
+    student1 = Student("Vali", "Rahimov", 2003, 2, "Informatika")
+
+    print(manager.add_pupil(pupil1))
+    print(manager.add_student(student1))
+
+    print("Barcha talabalar:")
+    print(manager.get_all_students())
+
+    print("Barcha o'quvchilar:")
+    print(manager.get_all_pupils())
+
+    print(manager.remove_student(student1))
+    print(manager.remove_pupil(pupil1))
+
+    print("O'chirishdan keyin barcha talabalar:")
+    print(manager.get_all_students())
+
+    print("O'chirishdan keyin barcha o'quvchilar:")
+    print(manager.get_all_pupils())
